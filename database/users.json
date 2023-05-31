@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "name": "John",
+        "surname": "Doe",
+        "birthdate": "1990-01-01",
+        "cellphone": "+1234567890",
+        "address": "123 Main St",
+        "city": "New York",
+        "state": "NY",
+        "active": true,
+        "isDeleted": false
+    },
+    {
+        "id": 2,
+        "name": "Jane",
+        "surname": "Smith",
+        "birthdate": "1985-05-10",
+        "cellphone": "+9876543210",
+        "address": "456 Elm St",
+        "city": "Los Angeles",
+        "state": "CA",
+        "active": false,
+        "isDeleted": false
+    },
+    {
+        "id": 3,
+        "name": "David",
+        "surname": "Johnson",
+        "birthdate": "1992-08-15",
+        "cellphone": "+2468135790",
+        "address": "789 Oak St",
+        "city": "Chicago",
+        "state": "IL",
+        "active": true,
+        "isDeleted": false
+    },
+    {
+        "id": 4,
+        "name": "Sarah",
+        "surname": "Williams",
+        "birthdate": "1988-03-22",
+        "cellphone": "+1357924680",
+        "address": "321 Pine St",
+        "city": "San Francisco",
+        "state": "CA",
+        "active": true,
+        "isDeleted": false
+    },
+    {
+        "id": 5,
+        "name": "Michael",
+        "surname": "Brown",
+        "birthdate": "1994-11-12",
+        "cellphone": "+9081726354",
+        "address": "987 Maple St",
+        "city": "Miami",
+        "state": "FL",
+        "active": false,
+        "isDeleted": false
+    },
+    {
+        "id": 6,
+        "name": "Emily",
+        "surname": "Taylor",
+        "birthdate": "1991-07-08",
+        "cellphone": "+5748392016",
+        "address": "654 Cedar St",
+        "city": "Seattle",
+        "state": "WA",
+        "active": true,
+        "isDeleted": false
+    },
+    {
+        "id": 7,
+        "name": "Daniel",
+        "surname": "Anderson",
+        "birthdate": "1987-04-18",
+        "cellphone": "+1029384756",
+        "address": "258 Walnut St",
+        "city": "Boston",
+        "state": "MA",
+        "active": false,
+        "isDeleted": false
+    },
+    {
+        "id": 8,
+        "name": "Olivia",
+        "surname": "Miller",
+        "birthdate": "1993-09-25",
+        "cellphone": "+6745839201",
+        "address": "741 Birch St",
+        "city": "Dallas",
+        "state": "TX",
+        "active": true,
+        "isDeleted": false
+    },
+    {
+        "id": 9,
+        "name": "James",
+        "surname": "Wilson",
+        "birthdate": "1989-02-05",
+        "cellphone": "+1928374650",
+        "address": "369 Willow St",
+        "city": "Denver",
+        "state": "CO",
+        "active": false,
+        "isDeleted": false
+    },
+    {
+        "id": 10,
+        "name": "Sophia",
+        "surname": "Jones",
+        "birthdate": "1995-06-30",
+        "cellphone": "+5061748293",
+        "address": "963 Chestnut St",
+        "city": "Houston",
+        "state": "TX",
+        "active": true,
+        "isDeleted": false
+    }
+]
