@@ -10,7 +10,7 @@
         "state": "NY",
         "active": true,
         "isDeleted": false,
-        "profImg": ""
+        "avatar": ""
     },
     {
         "code": 2,
@@ -23,7 +23,7 @@
         "state": "CA",
         "active": false,
         "isDeleted": false,
-        "profImg": ""
+        "avatar": ""
     },
     {
         "code": 3,
@@ -36,7 +36,7 @@
         "state": "IL",
         "active": true,
         "isDeleted": false,
-        "profImg": ""
+        "avatar": ""
     },
     {
         "code": 4,
@@ -49,7 +49,7 @@
         "state": "CA",
         "active": true,
         "isDeleted": false,
-        "profImg": ""
+        "avatar": ""
     },
     {
         "code": 5,
@@ -62,7 +62,7 @@
         "state": "FL",
         "active": false,
         "isDeleted": false,
-        "profImg": ""
+        "avatar": ""
     },
     {
         "code": 6,
@@ -75,7 +75,7 @@
         "state": "WA",
         "active": true,
         "isDeleted": false,
-        "profImg": ""
+        "avatar": ""
     },
     {
         "code": 7,
@@ -88,7 +88,7 @@
         "state": "MA",
         "active": false,
         "isDeleted": false,
-        "profImg": ""
+        "avatar": ""
     },
     {
         "code": 8,
@@ -101,7 +101,7 @@
         "state": "TX",
         "active": true,
         "isDeleted": false,
-        "profImg": ""
+        "avatar": ""
     },
     {
         "code": 9,
@@ -114,7 +114,7 @@
         "state": "CO",
         "active": false,
         "isDeleted": false,
-        "profImg": ""
+        "avatar": ""
     },
     {
         "code": 10,
@@ -127,6 +127,6 @@
         "state": "TX",
         "active": true,
         "isDeleted": false,
-        "profImg": ""
+        "avatar": ""
     }
 ]

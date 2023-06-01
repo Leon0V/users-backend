@@ -49,7 +49,7 @@ class UserController {
         }
     }
 
-    async getById(req, res) {
+    async getByCode(req, res) {
         try {
             console.log(req.params);
             const code = req.params.code;
@@ -102,42 +102,50 @@ class UserController {
         }
     }
 
+    //the code bellow is a hard delete:
+    // async delete(req, res) {
+    //     try {
+    //         const code = req.params.code;
+    //         const user = await userModel.findOne({ code: code });
+    //         if (user) {
+    //             await userModel.deleteOne({ code });
+    //             res.status(200).send(`Successfully removed the user with ID ${user.code} and name ${user.name} from the database.`);
+    //         } else {
+    //             res.status(404).json({ error: 'User not found.' });
+    //         }
+    //     } catch (error) {
+    //         console.error('Error deleting user:', error);
+    //         res.status(500).json({ error: 'Failed to delete user.' });
+    //     }
+    // }
+
     async uploadImg(req, res) {
         try {
             const code = req.params.code;
             const user = await userModel.findOne({ code: code, isDeleted: false });
-
-            if (user) {
-                upload.single('image')(req, res, async function (err) {
-                    if (err instanceof multer.MulterError) {
-                        console.error('Error uploading image:', err);
-                        res.status(500).json({ error: 'Failed to upload image.' });
-                    } else if (err) {
-                        console.error('Error uploading image:', err);
-                        res.status(500).json({ error: 'Failed to upload image.' });
-                    } else {
-                        if (req.file) {
-                            const filePath = req.file.path;
-                            console.log('File path:', filePath);
-                            const binaryData = fs.readFileSync(filePath);
-                            const base64Data = binaryData.toString('base64');
-                            console.log('Base64 data:', base64Data);
-                            user.profImg = base64Data;
-                            await user.save();
-                            fs.unlinkSync(filePath);
-                            console.log('File deleted:', filePath);
-                        }
-                        res.status(200).json({ message: 'Image uploaded successfully.' });
-                    }
-                });
-            } else {
+            console.log(user);
+            if (!user) {
                 res.status(404).json({ error: 'User not found.' });
+                return
+            };
+            if (req.file) {
+                const filePath = req.file.path;
+                console.log('File path:', filePath);
+                const binaryData = fs.readFileSync(filePath);
+                const base64Data = binaryData.toString('base64');
+                console.log('Base64 data:', base64Data);
+                user.avatar = base64Data;
+                await user.save();
+                fs.unlinkSync(filePath);
+                console.log('File deleted:', filePath);
             }
+            res.status(200).json({ message: 'Image uploaded successfully.' });
         } catch (error) {
             console.error('Error uploading image:', error);
             res.status(500).json({ error: 'Failed to upload image.' });
         }
     }
+
 }
 
 module.exports = new UserController();

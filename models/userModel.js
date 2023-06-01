@@ -11,7 +11,7 @@ const userSchema = new mongoose.Schema({
     state: String,
     active: Boolean,
     isDeleted: Boolean,
-    profImg: String
+    avatar: String
 });
 
 module.exports = mongoose.model('User', userSchema);

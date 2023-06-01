@@ -5,9 +5,9 @@ const upload = require('../uploads/multerHandler');
 
 router.get('/', userController.list);
 router.post('/', userController.save);
-router.get('/:code', userController.getById);
+router.get('/:code', userController.getByCode);
 router.put('/:code', userController.update);
 router.delete('/:code', userController.delete);
-router.patch('/profpic/:code', upload.single('image'), userController.uploadImg);
+router.patch('/profpic/:code', upload.single('avatar'), userController.uploadImg);
 
 module.exports = router;
