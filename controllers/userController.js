@@ -1,6 +1,7 @@
 const userModel = require('../models/userModel');
 const upload = require('../uploads/multerHandler');
 const multer = require('multer');
+const fs = require('fs');
 
 class UserController {
     async save(req, res) {
@@ -105,6 +106,7 @@ class UserController {
         try {
             const code = req.params.code;
             const user = await userModel.findOne({ code: code, isDeleted: false });
+
             if (user) {
                 upload.single('image')(req, res, async function (err) {
                     if (err instanceof multer.MulterError) {
@@ -115,8 +117,15 @@ class UserController {
                         res.status(500).json({ error: 'Failed to upload image.' });
                     } else {
                         if (req.file) {
-                            user.profImg = req.file.filename;
+                            const filePath = req.file.path;
+                            console.log('File path:', filePath);
+                            const binaryData = fs.readFileSync(filePath);
+                            const base64Data = binaryData.toString('base64');
+                            console.log('Base64 data:', base64Data);
+                            user.profImg = base64Data;
                             await user.save();
+                            fs.unlinkSync(filePath);
+                            console.log('File deleted:', filePath);
                         }
                         res.status(200).json({ message: 'Image uploaded successfully.' });
                     }
